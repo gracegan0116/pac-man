@@ -24,7 +24,13 @@ module animate_pacman (go, resetn, vga_x, vga_y, in_x, out_x, in_y, out_y, colou
 	wire [7:0] w_out_x;
 	wire [6:0] w_out_y;
 //	assign w_out_y = HEIGHT_SCREEN - HEIGHT_PLYR;
-	wire done_print; //done signal to know when finished printing
+
+	wire done_print_left; //done signal to know when finished printing
+	wire done_print_right;
+	wire done_print_up;
+	wire done_print_down;
+	
+	reg [1:0] draw_orientation;
 	
 	input [7:0] in_x; //original start x
 	reg [7:0] w_in_x;
@@ -32,15 +38,21 @@ module animate_pacman (go, resetn, vga_x, vga_y, in_x, out_x, in_y, out_y, colou
 	input [6:0] in_y; // original start y
 	reg[6:0] w_in_y;
 	
-	wire [7:0] w_vga_x; 
-	wire [6:0] w_vga_y;
+	wire [7:0] w_vga_x_right; 
+	wire [6:0] w_vga_y_right;
+	wire [7:0] w_vga_x_left; 
+	wire [6:0] w_vga_y_left;
+	wire [7:0] w_vga_x_up; 
+	wire [6:0] w_vga_y_up;
+	wire [7:0] w_vga_x_down; 
+	wire [6:0] w_vga_y_down;
 	
-	output [7:0] vga_x; //all pixels to be printed x
-	output [6:0] vga_y; //all pixels to be printed y
+	output reg [7:0] vga_x; //all pixels to be printed x
+	output reg [6:0] vga_y; //all pixels to be printed y
 	
 	output [7:0] out_x; //new shifted start x
 	output [6:0] out_y; // new shifted start y
-	output [2:0] colour;
+	output  colour;
 	output reg done = 0;
 	
 	reg [2:0] PresentState, NextState;
@@ -65,7 +77,7 @@ module animate_pacman (go, resetn, vga_x, vga_y, in_x, out_x, in_y, out_y, colou
 		end
 		PRINT:
 		begin
-			if (done_print == 1)
+			if (done_print_right || done_print_left || done_print_up || done_print_down)
 			begin
 				NextState = WAIT;
 				done = 1;
@@ -121,6 +133,7 @@ module animate_pacman (go, resetn, vga_x, vga_y, in_x, out_x, in_y, out_y, colou
 					go_increment_y_init = 1;
 					go_increment_y = 0;
 					go_decrement_y = 0;
+					draw_orientation = 2'b00;
 					writeEn = 0;
 				end
 			SHIFT:
@@ -133,6 +146,7 @@ module animate_pacman (go, resetn, vga_x, vga_y, in_x, out_x, in_y, out_y, colou
 						go_decrement = 0;
 						go_decrement_y = 1;
 						go_increment_y = 0;
+						draw_orientation = 2'b11;
 					end
 					else if (down == 0)
 					begin
@@ -140,6 +154,7 @@ module animate_pacman (go, resetn, vga_x, vga_y, in_x, out_x, in_y, out_y, colou
 						go_decrement = 0;
 						go_decrement_y = 0;
 						go_increment_y = 1;
+						draw_orientation = 2'b10;
 					end
 					
 					
@@ -149,6 +164,7 @@ module animate_pacman (go, resetn, vga_x, vga_y, in_x, out_x, in_y, out_y, colou
 						go_increment = 0;
 						go_decrement_y = 0;
 						go_increment_y = 0;
+						draw_orientation = 2'b01;
 					end
 					else if (right == 0)
 					begin
@@ -156,6 +172,7 @@ module animate_pacman (go, resetn, vga_x, vga_y, in_x, out_x, in_y, out_y, colou
 						go_decrement = 0;
 						go_decrement_y = 0;
 						go_increment_y = 0;
+						draw_orientation = 2'b00;
 					end
 					else 
 					begin
@@ -163,6 +180,7 @@ module animate_pacman (go, resetn, vga_x, vga_y, in_x, out_x, in_y, out_y, colou
 						go_decrement = 0;
 						go_decrement_y = 0;
 						go_increment_y = 0;
+						draw_orientation = 2'b00;
 					end
 					writeEn = 0;
 				end
@@ -185,6 +203,7 @@ module animate_pacman (go, resetn, vga_x, vga_y, in_x, out_x, in_y, out_y, colou
 					go_increment_y_init = 0;
 					go_increment_y = 0;
 					go_decrement_y = 0;
+					draw_orientation = 2'b00;
 				end
 		endcase
 	end
@@ -203,20 +222,82 @@ module animate_pacman (go, resetn, vga_x, vga_y, in_x, out_x, in_y, out_y, colou
 	assign out_y = w_in_y;
 	assign w_out_y = w_in_y;
 	
-	assign vga_x = w_vga_x;
-	assign vga_y = w_vga_y;
+//	assign vga_x = w_vga_x;
+//	assign vga_y = w_vga_y;
+
+	always @(posedge clock) begin
+		case (draw_orientation[1:0])
+			2'b00: begin
+				vga_x <= w_vga_x_right;
+				vga_y <= w_vga_y_right;
+			end
+			2'b01: begin
+				vga_x <= w_vga_x_left;
+				vga_y <= w_vga_y_left;
+			end
+			2'b10: begin
+				vga_x <= w_vga_x_down;
+				vga_y <= w_vga_y_down;
+			end
+			2'b11: begin
+				vga_x <= w_vga_x_up;
+				vga_y <= w_vga_y_up;
+			end
+			
+			default: begin
+				vga_x <= w_vga_x_right;
+				vga_y <= w_vga_y_right;
+			end
+		endcase
+	end
+			
 	
 	draw_pacman_right pacman_right (
 					.reset(resetn),
 					.writeEn(writeEn),
-					.x(w_vga_x),
-					.y(w_vga_y),
+					.x(w_vga_x_right),
+					.y(w_vga_y_right),
 					.startx(w_out_x),
 					.starty(w_out_y),
 					.clock(clock),
 					.colour(colour),
-					.done_print(done_print) 
+					.done_print(done_print_right) 
 					);
+	draw_pacman_left pacman_left (
+					.reset(resetn),
+					.writeEn(writeEn),
+					.x(w_vga_x_left),
+					.y(w_vga_y_left),
+					.startx(w_out_x),
+					.starty(w_out_y),
+					.clock(clock),
+					.colour(colour),
+					.done_print(done_print_left) 
+					);
+	draw_pacman_down pacman_down (
+					.reset(resetn),
+					.writeEn(writeEn),
+					.x(w_vga_x_down),
+					.y(w_vga_y_down),
+					.startx(w_out_x),
+					.starty(w_out_y),
+					.clock(clock),
+					.colour(colour),
+					.done_print(done_print_down) 
+					);
+	draw_pacman_up pacman_up (
+					.reset(resetn),
+					.writeEn(writeEn),
+					.x(w_vga_x_up),
+					.y(w_vga_y_up),
+					.startx(w_out_x),
+					.starty(w_out_y),
+					.clock(clock),
+					.colour(colour),
+					.done_print(done_print_up) 
+					);
+					
+					
 					
 
 endmodule
