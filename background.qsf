@@ -41,7 +41,7 @@ set_global_assignment -name DEVICE 5CSEMA5F31C6
 set_global_assignment -name TOP_LEVEL_ENTITY background
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:21:28  NOVEMBER 12, 2018"
-set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Standard Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -328,4 +328,5 @@ set_global_assignment -name QIP_FILE pacman_down_small.qip
 set_global_assignment -name VERILOG_FILE draw_pacman_left.v
 set_global_assignment -name VERILOG_FILE draw_pacman_up.v
 set_global_assignment -name VERILOG_FILE draw_pacman_down.v
+set_global_assignment -name QIP_FILE maze_colour.qip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

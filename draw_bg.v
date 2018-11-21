@@ -3,17 +3,24 @@ module draw_bg (enable, clk, resetn, vga_x, vga_y, colour, done);
     output [7:0] vga_x;
     output [6:0] vga_y;
     output reg done = 0;
-    output colour;
+    output [2:0] colour;
 
     wire [14:0] address;
     reg [7:0] count_x = 0;
     reg [6:0] count_y = 0;
 
-    bg_mono bg (
-        .address(address),
-        .clock(clk),
-        .q(colour)
-    );
+//    maze_colour bg (
+//        .address(address),
+//        .clock(clk),
+//		  .data(3'b000),
+//		  .wren(1'b0),
+//        .q(colour)
+//    );
+
+ bg_mono bg(
+	address,
+	clk,
+	colour);
 
     reg [7:0] addr_x = 0;
     reg [6:0] addr_y = 0;

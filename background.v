@@ -58,7 +58,7 @@ module background
 
     wire[7:0] bg_x;
     wire [6:0] bg_y;
-    wire colour_bg;
+    wire[2:0] colour_bg;
 
     reg[7:0] start_pacman_x = 80;
     reg [6:0] start_pacman_y = 60;
@@ -219,8 +219,8 @@ module background
 			.VGA_SYNC(VGA_SYNC_N),
 			.VGA_CLK(VGA_CLK));
 		defparam VGA.RESOLUTION = "160x120";
-		defparam VGA.MONOCHROME = "TRUE";
-		defparam VGA.BITS_PER_COLOUR_CHANNEL = 1;
+		defparam VGA.MONOCHROME = "FALSE";
+		defparam VGA.BITS_PER_COLOUR_CHANNEL = 3;
 		defparam VGA.BACKGROUND_IMAGE = "black.mif";
 			
 	// Put your code here. Your code should produce signals x,y,colour and writeEn

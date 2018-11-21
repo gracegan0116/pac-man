@@ -40,7 +40,7 @@ module animate_pacman (go, resetn, vga_x, vga_y, in_x, out_x, in_y, out_y, colou
 	
 	output [7:0] out_x; //new shifted start x
 	output [6:0] out_y; // new shifted start y
-	output [2:0] colour;
+	output colour;
 	output reg done = 0;
 	
 	reg [2:0] PresentState, NextState;

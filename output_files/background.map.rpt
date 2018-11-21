@@ -1,6 +1,6 @@
 Analysis & Synthesis report for background
-Thu Nov 15 15:58:38 2018
-Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+Wed Nov 21 00:40:06 2018
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
 ---------------------
@@ -19,28 +19,28 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
  11. State Machine - |background|animate_pacman:pacman|PresentState
  12. User-Specified and Inferred Latches
  13. Registers Removed During Synthesis
- 14. General Register Statistics
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for animate_pacman:pacman|draw_pacman_right:pacman_right|pacman_right_small:pacman|altsyncram:altsyncram_component|altsyncram_aah1:auto_generated
- 17. Source assignments for draw_bg:comb_9|bg_mono:bg|altsyncram:altsyncram_component|altsyncram_ccg1:auto_generated
- 18. Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_i6m1:auto_generated
- 19. Parameter Settings for User Entity Instance: Top-level Entity: |background
- 20. Parameter Settings for User Entity Instance: animate_pacman:pacman
- 21. Parameter Settings for User Entity Instance: animate_pacman:pacman|draw_pacman_right:pacman_right|pacman_right_small:pacman|altsyncram:altsyncram_component
- 22. Parameter Settings for User Entity Instance: draw_bg:comb_9|bg_mono:bg|altsyncram:altsyncram_component
- 23. Parameter Settings for User Entity Instance: vga_adapter:VGA
- 24. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_address_translator:user_input_translator
- 25. Parameter Settings for User Entity Instance: vga_adapter:VGA|altsyncram:VideoMemory
- 26. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component
- 27. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller
- 28. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator
- 29. altsyncram Parameter Settings by Entity Instance
- 30. altpll Parameter Settings by Entity Instance
- 31. Port Connectivity Checks: "vga_adapter:VGA|vga_controller:controller"
- 32. Port Connectivity Checks: "vga_adapter:VGA"
- 33. Port Connectivity Checks: "animate_pacman:pacman|draw_pacman_right:pacman_right|pacman_right_small:pacman"
- 34. Port Connectivity Checks: "animate_pacman:pacman|draw_pacman_right:pacman_right"
- 35. Port Connectivity Checks: "animate_pacman:pacman"
+ 14. Removed Registers Triggering Further Register Optimizations
+ 15. General Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for animate_pacman:pacman|draw_pacman_right:pacman_right|pacman_right_small:pacman|altsyncram:altsyncram_component|altsyncram_aah1:auto_generated
+ 18. Source assignments for draw_bg:comb_9|bg_mono:bg|altsyncram:altsyncram_component|altsyncram_ccg1:auto_generated
+ 19. Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_27m1:auto_generated
+ 20. Parameter Settings for User Entity Instance: Top-level Entity: |background
+ 21. Parameter Settings for User Entity Instance: animate_pacman:pacman
+ 22. Parameter Settings for User Entity Instance: animate_pacman:pacman|draw_pacman_right:pacman_right|pacman_right_small:pacman|altsyncram:altsyncram_component
+ 23. Parameter Settings for User Entity Instance: draw_bg:comb_9|bg_mono:bg|altsyncram:altsyncram_component
+ 24. Parameter Settings for User Entity Instance: vga_adapter:VGA
+ 25. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_address_translator:user_input_translator
+ 26. Parameter Settings for User Entity Instance: vga_adapter:VGA|altsyncram:VideoMemory
+ 27. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component
+ 28. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller
+ 29. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator
+ 30. altsyncram Parameter Settings by Entity Instance
+ 31. altpll Parameter Settings by Entity Instance
+ 32. Port Connectivity Checks: "vga_adapter:VGA|vga_controller:controller"
+ 33. Port Connectivity Checks: "vga_adapter:VGA"
+ 34. Port Connectivity Checks: "draw_bg:comb_9|bg_mono:bg"
+ 35. Port Connectivity Checks: "animate_pacman:pacman|draw_pacman_right:pacman_right|pacman_right_small:pacman"
  36. Port Connectivity Checks: "mux_vga:mux"
  37. Post-Synthesis Netlist Statistics for Top Partition
  38. Elapsed Time Per Partition
@@ -68,27 +68,27 @@ refer to the applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                      ;
-+---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Nov 15 15:58:37 2018           ;
-; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Standard Edition ;
-; Revision Name                   ; background                                      ;
-; Top-level Entity Name           ; background                                      ;
-; Family                          ; Cyclone V                                       ;
-; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 125                                             ;
-; Total pins                      ; 50                                              ;
-; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 38,425                                          ;
-; Total DSP Blocks                ; 0                                               ;
-; Total HSSI RX PCSs              ; 0                                               ;
-; Total HSSI PMA RX Deserializers ; 0                                               ;
-; Total HSSI TX PCSs              ; 0                                               ;
-; Total HSSI PMA TX Serializers   ; 0                                               ;
-; Total PLLs                      ; 1                                               ;
-; Total DLLs                      ; 0                                               ;
-+---------------------------------+-------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Nov 21 00:40:06 2018       ;
+; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                   ; background                                  ;
+; Top-level Entity Name           ; background                                  ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 121                                         ;
+; Total pins                      ; 50                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 192,025                                     ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 1                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -183,57 +183,58 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                          ;
-+----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                            ; Library ;
-+----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------+---------+
-; mux_vga.v                        ; yes             ; User Verilog HDL File                  ; D:/background/mux_vga.v                                                 ;         ;
-; animate_pacman.v                 ; yes             ; User Verilog HDL File                  ; D:/background/animate_pacman.v                                          ;         ;
-; draw_pacman_right.v              ; yes             ; User Verilog HDL File                  ; D:/background/draw_pacman_right.v                                       ;         ;
-; draw_bg.v                        ; yes             ; User Verilog HDL File                  ; D:/background/draw_bg.v                                                 ;         ;
-; background.v                     ; yes             ; User Verilog HDL File                  ; D:/background/background.v                                              ;         ;
-; bg_mono.v                        ; yes             ; User Wizard-Generated File             ; D:/background/bg_mono.v                                                 ;         ;
-; pacman_right_small.v             ; yes             ; User Wizard-Generated File             ; D:/background/pacman_right_small.v                                      ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; aglobal180.inc                   ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/aglobal180.inc        ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_aah1.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/background/db/altsyncram_aah1.tdf                                    ;         ;
-; pacman_right_small.mif           ; yes             ; Auto-Found Memory Initialization File  ; D:/background/pacman_right_small.mif                                    ;         ;
-; db/altsyncram_ccg1.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/background/db/altsyncram_ccg1.tdf                                    ;         ;
-; bg_mono.mif                      ; yes             ; Auto-Found Memory Initialization File  ; D:/background/bg_mono.mif                                               ;         ;
-; db/decode_01a.tdf                ; yes             ; Auto-Generated Megafunction            ; D:/background/db/decode_01a.tdf                                         ;         ;
-; db/mux_gfb.tdf                   ; yes             ; Auto-Generated Megafunction            ; D:/background/db/mux_gfb.tdf                                            ;         ;
-; vga_adapter.v                    ; yes             ; Auto-Found Verilog HDL File            ; D:/background/vga_adapter.v                                             ;         ;
-; vga_address_translator.v         ; yes             ; Auto-Found Verilog HDL File            ; D:/background/vga_address_translator.v                                  ;         ;
-; db/altsyncram_i6m1.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/background/db/altsyncram_i6m1.tdf                                    ;         ;
-; db/decode_7la.tdf                ; yes             ; Auto-Generated Megafunction            ; D:/background/db/decode_7la.tdf                                         ;         ;
-; vga_pll.v                        ; yes             ; Auto-Found Wizard-Generated File       ; D:/background/vga_pll.v                                                 ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/altpll.tdf            ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/stratix_pll.inc       ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/stratixii_pll.inc     ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                           ; c:/desl/quartus18/quartus/libraries/megafunctions/cycloneii_pll.inc     ;         ;
-; db/altpll_80u.tdf                ; yes             ; Auto-Generated Megafunction            ; D:/background/db/altpll_80u.tdf                                         ;         ;
-; vga_controller.v                 ; yes             ; Auto-Found Verilog HDL File            ; D:/background/vga_controller.v                                          ;         ;
-+----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                               ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
+; mux_vga.v                        ; yes             ; User Verilog HDL File                  ; C:/Users/User/Documents/Year 2/ece241/pac-man/mux_vga.v                      ;         ;
+; animate_pacman.v                 ; yes             ; User Verilog HDL File                  ; C:/Users/User/Documents/Year 2/ece241/pac-man/animate_pacman.v               ;         ;
+; draw_pacman_right.v              ; yes             ; User Verilog HDL File                  ; C:/Users/User/Documents/Year 2/ece241/pac-man/draw_pacman_right.v            ;         ;
+; draw_bg.v                        ; yes             ; User Verilog HDL File                  ; C:/Users/User/Documents/Year 2/ece241/pac-man/draw_bg.v                      ;         ;
+; background.v                     ; yes             ; User Verilog HDL File                  ; C:/Users/User/Documents/Year 2/ece241/pac-man/background.v                   ;         ;
+; bg_mono.v                        ; yes             ; User Wizard-Generated File             ; C:/Users/User/Documents/Year 2/ece241/pac-man/bg_mono.v                      ;         ;
+; pacman_right_small.v             ; yes             ; User Wizard-Generated File             ; C:/Users/User/Documents/Year 2/ece241/pac-man/pacman_right_small.v           ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal180.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/aglobal180.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_aah1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/User/Documents/Year 2/ece241/pac-man/db/altsyncram_aah1.tdf         ;         ;
+; pacman_right_small.mif           ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/User/Documents/Year 2/ece241/pac-man/pacman_right_small.mif         ;         ;
+; db/altsyncram_ccg1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/User/Documents/Year 2/ece241/pac-man/db/altsyncram_ccg1.tdf         ;         ;
+; bg_mono.mif                      ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/User/Documents/Year 2/ece241/pac-man/bg_mono.mif                    ;         ;
+; db/decode_01a.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/User/Documents/Year 2/ece241/pac-man/db/decode_01a.tdf              ;         ;
+; db/mux_gfb.tdf                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/User/Documents/Year 2/ece241/pac-man/db/mux_gfb.tdf                 ;         ;
+; vga_adapter.v                    ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/User/Documents/Year 2/ece241/pac-man/vga_adapter.v                  ;         ;
+; vga_address_translator.v         ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/User/Documents/Year 2/ece241/pac-man/vga_address_translator.v       ;         ;
+; db/altsyncram_27m1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/User/Documents/Year 2/ece241/pac-man/db/altsyncram_27m1.tdf         ;         ;
+; db/decode_7la.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/User/Documents/Year 2/ece241/pac-man/db/decode_7la.tdf              ;         ;
+; db/mux_ofb.tdf                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/User/Documents/Year 2/ece241/pac-man/db/mux_ofb.tdf                 ;         ;
+; vga_pll.v                        ; yes             ; Auto-Found Wizard-Generated File       ; C:/Users/User/Documents/Year 2/ece241/pac-man/vga_pll.v                      ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altpll.tdf            ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/stratix_pll.inc       ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/stratixii_pll.inc     ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/cycloneii_pll.inc     ;         ;
+; db/altpll_80u.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/User/Documents/Year 2/ece241/pac-man/db/altpll_80u.tdf              ;         ;
+; vga_controller.v                 ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/User/Documents/Year 2/ece241/pac-man/vga_controller.v               ;         ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -241,20 +242,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 124            ;
+; Estimate of Logic utilization (ALMs needed) ; 128            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 231            ;
+; Combinational ALUT usage for logic          ; 236            ;
 ;     -- 7 input functions                    ; 1              ;
-;     -- 6 input functions                    ; 15             ;
-;     -- 5 input functions                    ; 27             ;
-;     -- 4 input functions                    ; 14             ;
-;     -- <=3 input functions                  ; 174            ;
+;     -- 6 input functions                    ; 17             ;
+;     -- 5 input functions                    ; 37             ;
+;     -- 4 input functions                    ; 18             ;
+;     -- <=3 input functions                  ; 163            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 125            ;
+; Dedicated logic registers                   ; 121            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 50             ;
 ; Total MLAB memory bits                      ; 0              ;
-; Total block memory bits                     ; 38425          ;
+; Total block memory bits                     ; 192025         ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
@@ -262,9 +263,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 103            ;
-; Total fan-out                               ; 1381           ;
-; Average fan-out                             ; 2.98           ;
+; Maximum fan-out                             ; 123            ;
+; Total fan-out                               ; 2143           ;
+; Average fan-out                             ; 4.38           ;
 +---------------------------------------------+----------------+
 
 
@@ -273,9 +274,9 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                       ; Entity Name            ; Library Name ;
 +---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
-; |background                                             ; 231 (38)            ; 125 (33)                  ; 38425             ; 0          ; 50   ; 0            ; |background                                                                                                                                               ; background             ; work         ;
-;    |animate_pacman:pacman|                              ; 76 (22)             ; 44 (18)                   ; 25                ; 0          ; 0    ; 0            ; |background|animate_pacman:pacman                                                                                                                         ; animate_pacman         ; work         ;
-;       |draw_pacman_right:pacman_right|                  ; 54 (54)             ; 26 (26)                   ; 25                ; 0          ; 0    ; 0            ; |background|animate_pacman:pacman|draw_pacman_right:pacman_right                                                                                          ; draw_pacman_right      ; work         ;
+; |background                                             ; 236 (39)            ; 121 (33)                  ; 192025            ; 0          ; 50   ; 0            ; |background                                                                                                                                               ; background             ; work         ;
+;    |animate_pacman:pacman|                              ; 70 (20)             ; 40 (16)                   ; 25                ; 0          ; 0    ; 0            ; |background|animate_pacman:pacman                                                                                                                         ; animate_pacman         ; work         ;
+;       |draw_pacman_right:pacman_right|                  ; 50 (50)             ; 24 (24)                   ; 25                ; 0          ; 0    ; 0            ; |background|animate_pacman:pacman|draw_pacman_right:pacman_right                                                                                          ; draw_pacman_right      ; work         ;
 ;          |pacman_right_small:pacman|                    ; 0 (0)               ; 0 (0)                     ; 25                ; 0          ; 0    ; 0            ; |background|animate_pacman:pacman|draw_pacman_right:pacman_right|pacman_right_small:pacman                                                                ; pacman_right_small     ; work         ;
 ;             |altsyncram:altsyncram_component|           ; 0 (0)               ; 0 (0)                     ; 25                ; 0          ; 0    ; 0            ; |background|animate_pacman:pacman|draw_pacman_right:pacman_right|pacman_right_small:pacman|altsyncram:altsyncram_component                                ; altsyncram             ; work         ;
 ;                |altsyncram_aah1:auto_generated|         ; 0 (0)               ; 0 (0)                     ; 25                ; 0          ; 0    ; 0            ; |background|animate_pacman:pacman|draw_pacman_right:pacman_right|pacman_right_small:pacman|altsyncram:altsyncram_component|altsyncram_aah1:auto_generated ; altsyncram_aah1        ; work         ;
@@ -284,14 +285,14 @@ refer to the applicable agreement for further details.
 ;          |altsyncram:altsyncram_component|              ; 3 (0)               ; 2 (0)                     ; 19200             ; 0          ; 0    ; 0            ; |background|draw_bg:comb_9|bg_mono:bg|altsyncram:altsyncram_component                                                                                     ; altsyncram             ; work         ;
 ;             |altsyncram_ccg1:auto_generated|            ; 3 (0)               ; 2 (2)                     ; 19200             ; 0          ; 0    ; 0            ; |background|draw_bg:comb_9|bg_mono:bg|altsyncram:altsyncram_component|altsyncram_ccg1:auto_generated                                                      ; altsyncram_ccg1        ; work         ;
 ;                |decode_01a:rden_decode|                 ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |background|draw_bg:comb_9|bg_mono:bg|altsyncram:altsyncram_component|altsyncram_ccg1:auto_generated|decode_01a:rden_decode                               ; decode_01a             ; work         ;
-;    |mux_vga:mux|                                        ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |background|mux_vga:mux                                                                                                                                   ; mux_vga                ; work         ;
-;    |vga_adapter:VGA|                                    ; 63 (4)              ; 30 (0)                    ; 19200             ; 0          ; 0    ; 0            ; |background|vga_adapter:VGA                                                                                                                               ; vga_adapter            ; work         ;
-;       |altsyncram:VideoMemory|                          ; 7 (0)               ; 4 (0)                     ; 19200             ; 0          ; 0    ; 0            ; |background|vga_adapter:VGA|altsyncram:VideoMemory                                                                                                        ; altsyncram             ; work         ;
-;          |altsyncram_i6m1:auto_generated|               ; 7 (0)               ; 4 (4)                     ; 19200             ; 0          ; 0    ; 0            ; |background|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_i6m1:auto_generated                                                                         ; altsyncram_i6m1        ; work         ;
-;             |decode_01a:rden_decode_b|                  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |background|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_i6m1:auto_generated|decode_01a:rden_decode_b                                                ; decode_01a             ; work         ;
-;             |decode_7la:decode2|                        ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |background|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_i6m1:auto_generated|decode_7la:decode2                                                      ; decode_7la             ; work         ;
-;             |mux_gfb:mux3|                              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |background|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_i6m1:auto_generated|mux_gfb:mux3                                                            ; mux_gfb                ; work         ;
-;       |vga_address_translator:user_input_translator|    ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |background|vga_adapter:VGA|vga_address_translator:user_input_translator                                                                                  ; vga_address_translator ; work         ;
+;    |mux_vga:mux|                                        ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |background|mux_vga:mux                                                                                                                                   ; mux_vga                ; work         ;
+;    |vga_adapter:VGA|                                    ; 76 (3)              ; 30 (0)                    ; 172800            ; 0          ; 0    ; 0            ; |background|vga_adapter:VGA                                                                                                                               ; vga_adapter            ; work         ;
+;       |altsyncram:VideoMemory|                          ; 15 (0)              ; 4 (0)                     ; 172800            ; 0          ; 0    ; 0            ; |background|vga_adapter:VGA|altsyncram:VideoMemory                                                                                                        ; altsyncram             ; work         ;
+;          |altsyncram_27m1:auto_generated|               ; 15 (0)              ; 4 (4)                     ; 172800            ; 0          ; 0    ; 0            ; |background|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_27m1:auto_generated                                                                         ; altsyncram_27m1        ; work         ;
+;             |decode_01a:rden_decode_b|                  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |background|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_27m1:auto_generated|decode_01a:rden_decode_b                                                ; decode_01a             ; work         ;
+;             |decode_7la:decode2|                        ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |background|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_27m1:auto_generated|decode_7la:decode2                                                      ; decode_7la             ; work         ;
+;             |mux_ofb:mux3|                              ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |background|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_27m1:auto_generated|mux_ofb:mux3                                                            ; mux_ofb                ; work         ;
+;       |vga_address_translator:user_input_translator|    ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |background|vga_adapter:VGA|vga_address_translator:user_input_translator                                                                                  ; vga_address_translator ; work         ;
 ;       |vga_controller:controller|                       ; 42 (32)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |background|vga_adapter:VGA|vga_controller:controller                                                                                                     ; vga_controller         ; work         ;
 ;          |vga_address_translator:controller_translator| ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |background|vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator                                                        ; vga_address_translator ; work         ;
 ;       |vga_pll:mypll|                                   ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |background|vga_adapter:VGA|vga_pll:mypll                                                                                                                 ; vga_pll                ; work         ;
@@ -301,15 +302,15 @@ refer to the applicable agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                                ;
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------------------------+
-; Name                                                                                                                                                     ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                    ;
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------------------------+
-; animate_pacman:pacman|draw_pacman_right:pacman_right|pacman_right_small:pacman|altsyncram:altsyncram_component|altsyncram_aah1:auto_generated|ALTSYNCRAM ; AUTO ; ROM              ; 25           ; 1            ; --           ; --           ; 25    ; pacman_right_small.mif ;
-; draw_bg:comb_9|bg_mono:bg|altsyncram:altsyncram_component|altsyncram_ccg1:auto_generated|ALTSYNCRAM                                                      ; AUTO ; ROM              ; 19200        ; 1            ; --           ; --           ; 19200 ; bg_mono.mif            ;
-; vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_i6m1:auto_generated|ALTSYNCRAM                                                                         ; AUTO ; Simple Dual Port ; 19200        ; 1            ; 19200        ; 1            ; 19200 ; None                   ;
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                                 ;
++----------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------------------------+
+; Name                                                                                                                                                     ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF                    ;
++----------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------------------------+
+; animate_pacman:pacman|draw_pacman_right:pacman_right|pacman_right_small:pacman|altsyncram:altsyncram_component|altsyncram_aah1:auto_generated|ALTSYNCRAM ; AUTO ; ROM              ; 25           ; 1            ; --           ; --           ; 25     ; pacman_right_small.mif ;
+; draw_bg:comb_9|bg_mono:bg|altsyncram:altsyncram_component|altsyncram_ccg1:auto_generated|ALTSYNCRAM                                                      ; AUTO ; ROM              ; 19200        ; 1            ; --           ; --           ; 19200  ; bg_mono.mif            ;
+; vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_27m1:auto_generated|ALTSYNCRAM                                                                         ; AUTO ; Simple Dual Port ; 19200        ; 9            ; 19200        ; 9            ; 172800 ; None                   ;
++----------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -358,33 +359,44 @@ Encoding Type:  One-Hot
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+-------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                            ;
-+----------------------------------------+--------------------------------------+
-; Register name                          ; Reason for Removal                   ;
-+----------------------------------------+--------------------------------------+
-; draw_bg:comb_9|count_y[6]              ; Merged with draw_bg:comb_9|addr_y[6] ;
-; draw_bg:comb_9|count_y[5]              ; Merged with draw_bg:comb_9|addr_y[5] ;
-; draw_bg:comb_9|count_y[4]              ; Merged with draw_bg:comb_9|addr_y[4] ;
-; draw_bg:comb_9|count_y[3]              ; Merged with draw_bg:comb_9|addr_y[3] ;
-; draw_bg:comb_9|count_y[2]              ; Merged with draw_bg:comb_9|addr_y[2] ;
-; draw_bg:comb_9|count_y[1]              ; Merged with draw_bg:comb_9|addr_y[1] ;
-; draw_bg:comb_9|count_y[0]              ; Merged with draw_bg:comb_9|addr_y[0] ;
-; draw_bg:comb_9|count_x[7]              ; Merged with draw_bg:comb_9|addr_x[7] ;
-; draw_bg:comb_9|count_x[6]              ; Merged with draw_bg:comb_9|addr_x[6] ;
-; draw_bg:comb_9|count_x[5]              ; Merged with draw_bg:comb_9|addr_x[5] ;
-; draw_bg:comb_9|count_x[4]              ; Merged with draw_bg:comb_9|addr_x[4] ;
-; draw_bg:comb_9|count_x[3]              ; Merged with draw_bg:comb_9|addr_x[3] ;
-; draw_bg:comb_9|count_x[2]              ; Merged with draw_bg:comb_9|addr_x[2] ;
-; draw_bg:comb_9|count_x[1]              ; Merged with draw_bg:comb_9|addr_x[1] ;
-; draw_bg:comb_9|count_x[0]              ; Merged with draw_bg:comb_9|addr_x[0] ;
-; current_state~2                        ; Lost fanout                          ;
-; current_state~3                        ; Lost fanout                          ;
-; current_state~4                        ; Lost fanout                          ;
-; current_state~5                        ; Lost fanout                          ;
-; animate_pacman:pacman|PresentState~2   ; Lost fanout                          ;
-; Total Number of Removed Registers = 20 ;                                      ;
-+----------------------------------------+--------------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                       ;
++-------------------------------------------------------------------+--------------------------------------+
+; Register name                                                     ; Reason for Removal                   ;
++-------------------------------------------------------------------+--------------------------------------+
+; draw_bg:comb_9|count_y[4]                                         ; Merged with draw_bg:comb_9|addr_y[4] ;
+; draw_bg:comb_9|count_y[3]                                         ; Merged with draw_bg:comb_9|addr_y[3] ;
+; draw_bg:comb_9|count_y[2]                                         ; Merged with draw_bg:comb_9|addr_y[2] ;
+; draw_bg:comb_9|count_y[1]                                         ; Merged with draw_bg:comb_9|addr_y[1] ;
+; draw_bg:comb_9|count_y[0]                                         ; Merged with draw_bg:comb_9|addr_y[0] ;
+; draw_bg:comb_9|count_x[5]                                         ; Merged with draw_bg:comb_9|addr_x[5] ;
+; draw_bg:comb_9|count_x[4]                                         ; Merged with draw_bg:comb_9|addr_x[4] ;
+; draw_bg:comb_9|count_x[3]                                         ; Merged with draw_bg:comb_9|addr_x[3] ;
+; draw_bg:comb_9|count_x[2]                                         ; Merged with draw_bg:comb_9|addr_x[2] ;
+; draw_bg:comb_9|count_x[1]                                         ; Merged with draw_bg:comb_9|addr_x[1] ;
+; draw_bg:comb_9|count_x[0]                                         ; Merged with draw_bg:comb_9|addr_x[0] ;
+; draw_bg:comb_9|count_y[6]                                         ; Merged with draw_bg:comb_9|addr_y[6] ;
+; draw_bg:comb_9|count_y[5]                                         ; Merged with draw_bg:comb_9|addr_y[5] ;
+; draw_bg:comb_9|count_x[7]                                         ; Merged with draw_bg:comb_9|addr_x[7] ;
+; draw_bg:comb_9|count_x[6]                                         ; Merged with draw_bg:comb_9|addr_x[6] ;
+; current_state~2                                                   ; Lost fanout                          ;
+; current_state~3                                                   ; Lost fanout                          ;
+; current_state~4                                                   ; Lost fanout                          ;
+; current_state~5                                                   ; Lost fanout                          ;
+; animate_pacman:pacman|PresentState~2                              ; Lost fanout                          ;
+; animate_pacman:pacman|draw_pacman_right:pacman_right|count_x[6,7] ; Lost fanout                          ;
+; animate_pacman:pacman|w_in_x[6,7]                                 ; Lost fanout                          ;
+; Total Number of Removed Registers = 24                            ;                                      ;
++-------------------------------------------------------------------+--------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                            ;
++-----------------------------------------------------------------+--------------------+-----------------------------------------------------------------+
+; Register name                                                   ; Reason for Removal ; Registers Removed due to This Register                          ;
++-----------------------------------------------------------------+--------------------+-----------------------------------------------------------------+
+; animate_pacman:pacman|draw_pacman_right:pacman_right|count_x[7] ; Lost Fanouts       ; animate_pacman:pacman|draw_pacman_right:pacman_right|count_x[6] ;
++-----------------------------------------------------------------+--------------------+-----------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -392,27 +404,28 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 125   ;
-; Number of registers using Synchronous Clear  ; 92    ;
+; Total registers                              ; 121   ;
+; Number of registers using Synchronous Clear  ; 90    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 20    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 94    ;
+; Number of registers using Clock Enable       ; 90    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |background|vga_adapter:VGA|vga_controller:controller|yCounter[2]           ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |background|draw_bg:comb_9|addr_y[4]                                        ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |background|animate_pacman:pacman|draw_pacman_right:pacman_right|count_y[0] ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |background|draw_bg:comb_9|addr_x[5]                                        ;
-; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |background|animate_pacman:pacman|draw_pacman_right:pacman_right|addr_x[4]  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |background|vga_adapter:VGA|vga_controller:controller|yCounter[9]                                             ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |background|draw_bg:comb_9|addr_y[5]                                                                          ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |background|animate_pacman:pacman|draw_pacman_right:pacman_right|addr_y[4]                                    ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |background|draw_bg:comb_9|addr_x[6]                                                                          ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 0 LEs                ; 26 LEs                 ; Yes        ; |background|animate_pacman:pacman|draw_pacman_right:pacman_right|count_x[0]                                   ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |background|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_27m1:auto_generated|mux_ofb:mux3|result_node[8] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -434,7 +447,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 
 
 +----------------------------------------------------------------------------------------------+
-; Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_i6m1:auto_generated ;
+; Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_27m1:auto_generated ;
 +---------------------------------+--------------------+------+--------------------------------+
 ; Assignment                      ; Value              ; From ; To                             ;
 +---------------------------------+--------------------+------+--------------------------------+
@@ -599,8 +612,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------+-----------+------------------------+
 ; Parameter Name          ; Value     ; Type                   ;
 +-------------------------+-----------+------------------------+
-; BITS_PER_COLOUR_CHANNEL ; 1         ; Signed Integer         ;
-; MONOCHROME              ; TRUE      ; String                 ;
+; BITS_PER_COLOUR_CHANNEL ; 3         ; Signed Integer         ;
+; MONOCHROME              ; FALSE     ; String                 ;
 ; RESOLUTION              ; 160x120   ; String                 ;
 ; BACKGROUND_IMAGE        ; black.mif ; String                 ;
 +-------------------------+-----------+------------------------+
@@ -629,7 +642,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE          ;
 ; WIDTH_BYTEENA                      ; 1                    ; Untyped                 ;
 ; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                 ;
-; WIDTH_A                            ; 1                    ; Signed Integer          ;
+; WIDTH_A                            ; 9                    ; Signed Integer          ;
 ; WIDTHAD_A                          ; 15                   ; Signed Integer          ;
 ; NUMWORDS_A                         ; 19200                ; Signed Integer          ;
 ; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                 ;
@@ -638,7 +651,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                 ;
 ; INDATA_ACLR_A                      ; NONE                 ; Untyped                 ;
 ; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                 ;
-; WIDTH_B                            ; 1                    ; Signed Integer          ;
+; WIDTH_B                            ; 9                    ; Signed Integer          ;
 ; WIDTHAD_B                          ; 15                   ; Signed Integer          ;
 ; NUMWORDS_B                         ; 19200                ; Signed Integer          ;
 ; INDATA_REG_B                       ; CLOCK1               ; Untyped                 ;
@@ -673,7 +686,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                 ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                 ;
 ; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                 ;
-; CBXI_PARAMETER                     ; altsyncram_i6m1      ; Untyped                 ;
+; CBXI_PARAMETER                     ; altsyncram_27m1      ; Untyped                 ;
 +------------------------------------+----------------------+-------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1057,8 +1070,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------+------------+-------------------------------------------------+
 ; Parameter Name          ; Value      ; Type                                            ;
 +-------------------------+------------+-------------------------------------------------+
-; BITS_PER_COLOUR_CHANNEL ; 1          ; Signed Integer                                  ;
-; MONOCHROME              ; TRUE       ; String                                          ;
+; BITS_PER_COLOUR_CHANNEL ; 3          ; Signed Integer                                  ;
+; MONOCHROME              ; FALSE      ; String                                          ;
 ; RESOLUTION              ; 160x120    ; String                                          ;
 ; C_VERT_NUM_PIXELS       ; 0111100000 ; Unsigned Binary                                 ;
 ; C_VERT_SYNC_START       ; 0111101101 ; Unsigned Binary                                 ;
@@ -1112,10 +1125,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                                      ;
 ; Entity Instance                           ; vga_adapter:VGA|altsyncram:VideoMemory                                                                         ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                                                                                      ;
-;     -- WIDTH_A                            ; 1                                                                                                              ;
+;     -- WIDTH_A                            ; 9                                                                                                              ;
 ;     -- NUMWORDS_A                         ; 19200                                                                                                          ;
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                                                   ;
-;     -- WIDTH_B                            ; 1                                                                                                              ;
+;     -- WIDTH_B                            ; 9                                                                                                              ;
 ;     -- NUMWORDS_B                         ; 19200                                                                                                          ;
 ;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                                         ;
 ;     -- OUTDATA_REG_B                      ; CLOCK1                                                                                                         ;
@@ -1152,15 +1165,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "vga_adapter:VGA"                                                                                                                                                        ;
-+-------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                                                                                                                ;
-+-------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; VGA_R ; Output ; Warning  ; Output or bidir port (8 bits) is smaller than the port expression (10 bits) it drives.  The 2 most-significant bit(s) in the port expression will be connected to GND. ;
-; VGA_G ; Output ; Warning  ; Output or bidir port (8 bits) is smaller than the port expression (10 bits) it drives.  The 2 most-significant bit(s) in the port expression will be connected to GND. ;
-; VGA_B ; Output ; Warning  ; Output or bidir port (8 bits) is smaller than the port expression (10 bits) it drives.  The 2 most-significant bit(s) in the port expression will be connected to GND. ;
-+-------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "vga_adapter:VGA"                                                                                                                                                         ;
++--------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                                                                                ;
++--------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; colour ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "colour[8..1]" will be connected to GND.                         ;
+; VGA_R  ; Output ; Warning  ; Output or bidir port (8 bits) is smaller than the port expression (10 bits) it drives.  The 2 most-significant bit(s) in the port expression will be connected to GND. ;
+; VGA_G  ; Output ; Warning  ; Output or bidir port (8 bits) is smaller than the port expression (10 bits) it drives.  The 2 most-significant bit(s) in the port expression will be connected to GND. ;
+; VGA_B  ; Output ; Warning  ; Output or bidir port (8 bits) is smaller than the port expression (10 bits) it drives.  The 2 most-significant bit(s) in the port expression will be connected to GND. ;
++--------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "draw_bg:comb_9|bg_mono:bg"                                                                                                                                            ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                               ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; q    ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (3 bits) it drives.  The 2 most-significant bit(s) in the port expression will be connected to GND. ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1172,32 +1195,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "animate_pacman:pacman|draw_pacman_right:pacman_right"                                                                                                                   ;
-+--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                                                                                                               ;
-+--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; colour ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (3 bits) it drives.  The 2 most-significant bit(s) in the port expression will be connected to GND. ;
-+--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "animate_pacman:pacman"                                                                      ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port         ; Type   ; Severity ; Details                                                                             ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; colour[2..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mux_vga:mux"                                                                                                                                                                       ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port            ; Type   ; Severity ; Details                                                                                                                                                                 ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; MuxSelect[2..1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                            ;
-; out             ; Output ; Warning  ; Output or bidir port (16 bits) is smaller than the port expression (18 bits) it drives.  The 2 most-significant bit(s) in the port expression will be connected to GND. ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux_vga:mux"                                                                                   ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; MuxSelect[2..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; out[17..16]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -1205,41 +1210,42 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 125                         ;
+; arriav_ff             ; 121                         ;
 ;     CLR SCLR          ; 10                          ;
-;     ENA               ; 16                          ;
+;     ENA               ; 14                          ;
 ;     ENA CLR SCLR      ; 10                          ;
-;     ENA SCLR          ; 68                          ;
+;     ENA SCLR          ; 66                          ;
 ;     SCLR              ; 4                           ;
 ;     plain             ; 17                          ;
-; arriav_lcell_comb     ; 233                         ;
-;     arith             ; 113                         ;
+; arriav_lcell_comb     ; 237                         ;
+;     arith             ; 117                         ;
+;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 80                          ;
-;         2 data inputs ; 19                          ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 6                           ;
-;         5 data inputs ; 7                           ;
+;         2 data inputs ; 17                          ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 10                          ;
+;         5 data inputs ; 6                           ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 89                          ;
+;     normal            ; 99                          ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 2                           ;
 ;         2 data inputs ; 12                          ;
-;         3 data inputs ; 30                          ;
+;         3 data inputs ; 27                          ;
 ;         4 data inputs ; 8                           ;
-;         5 data inputs ; 20                          ;
-;         6 data inputs ; 15                          ;
-;     shared            ; 30                          ;
-;         0 data inputs ; 3                           ;
-;         1 data inputs ; 6                           ;
-;         2 data inputs ; 18                          ;
-;         3 data inputs ; 3                           ;
+;         5 data inputs ; 31                          ;
+;         6 data inputs ; 17                          ;
+;     shared            ; 20                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 12                          ;
+;         3 data inputs ; 2                           ;
 ; boundary_port         ; 50                          ;
 ; generic_pll           ; 1                           ;
-; stratixv_ram_block    ; 7                           ;
+; stratixv_ram_block    ; 31                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.40                        ;
-; Average LUT depth     ; 2.94                        ;
+; Max LUT depth         ; 5.70                        ;
+; Average LUT depth     ; 2.72                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1257,59 +1263,61 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
-    Info: Processing started: Thu Nov 15 15:58:13 2018
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Wed Nov 21 00:39:48 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off background -c background
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file pacman_left_small_bb.v
-    Info (12023): Found entity 1: pacmac_left_small File: D:/background/pacman_left_small_bb.v Line: 34
+    Info (12023): Found entity 1: pacmac_left_small File: C:/Users/User/Documents/Year 2/ece241/pac-man/pacman_left_small_bb.v Line: 34
 Info (12021): Found 1 design units, including 1 entities, in source file pacman_left_small.v
-    Info (12023): Found entity 1: pacman_left_small File: D:/background/pacman_left_small.v Line: 39
+    Info (12023): Found entity 1: pacman_left_small File: C:/Users/User/Documents/Year 2/ece241/pac-man/pacman_left_small.v Line: 39
 Warning (12019): Can't analyze file -- file pacmac_left_small.v is missing
 Warning (12019): Can't analyze file -- file pacmac_left_small_bb.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file mux_vga.v
-    Info (12023): Found entity 1: mux_vga File: D:/background/mux_vga.v Line: 1
+    Info (12023): Found entity 1: mux_vga File: C:/Users/User/Documents/Year 2/ece241/pac-man/mux_vga.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file animate_pacman.v
-    Info (12023): Found entity 1: animate_pacman File: D:/background/animate_pacman.v Line: 1
+    Info (12023): Found entity 1: animate_pacman File: C:/Users/User/Documents/Year 2/ece241/pac-man/animate_pacman.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file draw_pacman_right.v
-    Info (12023): Found entity 1: draw_pacman_right File: D:/background/draw_pacman_right.v Line: 1
+    Info (12023): Found entity 1: draw_pacman_right File: C:/Users/User/Documents/Year 2/ece241/pac-man/draw_pacman_right.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file draw_bg.v
-    Info (12023): Found entity 1: draw_bg File: D:/background/draw_bg.v Line: 1
+    Info (12023): Found entity 1: draw_bg File: C:/Users/User/Documents/Year 2/ece241/pac-man/draw_bg.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file background.v
-    Info (12023): Found entity 1: background File: D:/background/background.v Line: 3
+    Info (12023): Found entity 1: background File: C:/Users/User/Documents/Year 2/ece241/pac-man/background.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file pac2.v
-    Info (12023): Found entity 1: pac2 File: D:/background/pac2.v Line: 39
+    Info (12023): Found entity 1: pac2 File: C:/Users/User/Documents/Year 2/ece241/pac-man/pac2.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file right_rom.v
-    Info (12023): Found entity 1: right_ROM File: D:/background/right_ROM.v Line: 39
+    Info (12023): Found entity 1: right_ROM File: C:/Users/User/Documents/Year 2/ece241/pac-man/right_ROM.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file right_mono.v
-    Info (12023): Found entity 1: right_mono File: D:/background/right_mono.v Line: 39
+    Info (12023): Found entity 1: right_mono File: C:/Users/User/Documents/Year 2/ece241/pac-man/right_mono.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file bg_mono.v
-    Info (12023): Found entity 1: bg_mono File: D:/background/bg_mono.v Line: 39
+    Info (12023): Found entity 1: bg_mono File: C:/Users/User/Documents/Year 2/ece241/pac-man/bg_mono.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file pacman_right_small.v
-    Info (12023): Found entity 1: pacman_right_small File: D:/background/pacman_right_small.v Line: 39
+    Info (12023): Found entity 1: pacman_right_small File: C:/Users/User/Documents/Year 2/ece241/pac-man/pacman_right_small.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file pacman_up_small.v
-    Info (12023): Found entity 1: pacman_up_small File: D:/background/pacman_up_small.v Line: 39
+    Info (12023): Found entity 1: pacman_up_small File: C:/Users/User/Documents/Year 2/ece241/pac-man/pacman_up_small.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file pacman_down_small.v
-    Info (12023): Found entity 1: pacman_down_small File: D:/background/pacman_down_small.v Line: 39
+    Info (12023): Found entity 1: pacman_down_small File: C:/Users/User/Documents/Year 2/ece241/pac-man/pacman_down_small.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file draw_pacman_left.v
-    Info (12023): Found entity 1: draw_pacman_left File: D:/background/draw_pacman_left.v Line: 1
+    Info (12023): Found entity 1: draw_pacman_left File: C:/Users/User/Documents/Year 2/ece241/pac-man/draw_pacman_left.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file draw_pacman_up.v
-    Info (12023): Found entity 1: draw_pacman_up File: D:/background/draw_pacman_up.v Line: 1
+    Info (12023): Found entity 1: draw_pacman_up File: C:/Users/User/Documents/Year 2/ece241/pac-man/draw_pacman_up.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file draw_pacman_down.v
-    Info (12023): Found entity 1: draw_pacman_down File: D:/background/draw_pacman_down.v Line: 1
-Critical Warning (10846): Verilog HDL Instantiation warning at background.v(76): instance has no name File: D:/background/background.v Line: 76
+    Info (12023): Found entity 1: draw_pacman_down File: C:/Users/User/Documents/Year 2/ece241/pac-man/draw_pacman_down.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file maze_colour.v
+    Info (12023): Found entity 1: maze_colour File: C:/Users/User/Documents/Year 2/ece241/pac-man/maze_colour.v Line: 39
+Critical Warning (10846): Verilog HDL Instantiation warning at background.v(76): instance has no name File: C:/Users/User/Documents/Year 2/ece241/pac-man/background.v Line: 76
 Info (12127): Elaborating entity "background" for the top level hierarchy
-Info (12128): Elaborating entity "mux_vga" for hierarchy "mux_vga:mux" File: D:/background/background.v Line: 74
-Info (12128): Elaborating entity "animate_pacman" for hierarchy "animate_pacman:pacman" File: D:/background/background.v Line: 75
-Warning (10240): Verilog HDL Always Construct warning at animate_pacman.v(114): inferring latch(es) for variable "go_increment_y_init", which holds its previous value in one or more paths through the always construct File: D:/background/animate_pacman.v Line: 114
-Info (10041): Inferred latch for "go_increment_y_init" at animate_pacman.v(114) File: D:/background/animate_pacman.v Line: 114
-Info (12128): Elaborating entity "draw_pacman_right" for hierarchy "animate_pacman:pacman|draw_pacman_right:pacman_right" File: D:/background/animate_pacman.v Line: 219
-Warning (10230): Verilog HDL assignment warning at draw_pacman_right.v(54): truncated value with size 32 to match size of target (7) File: D:/background/draw_pacman_right.v Line: 54
-Info (12128): Elaborating entity "pacman_right_small" for hierarchy "animate_pacman:pacman|draw_pacman_right:pacman_right|pacman_right_small:pacman" File: D:/background/draw_pacman_right.v Line: 20
-Info (12128): Elaborating entity "altsyncram" for hierarchy "animate_pacman:pacman|draw_pacman_right:pacman_right|pacman_right_small:pacman|altsyncram:altsyncram_component" File: D:/background/pacman_right_small.v Line: 81
-Info (12130): Elaborated megafunction instantiation "animate_pacman:pacman|draw_pacman_right:pacman_right|pacman_right_small:pacman|altsyncram:altsyncram_component" File: D:/background/pacman_right_small.v Line: 81
-Info (12133): Instantiated megafunction "animate_pacman:pacman|draw_pacman_right:pacman_right|pacman_right_small:pacman|altsyncram:altsyncram_component" with the following parameter: File: D:/background/pacman_right_small.v Line: 81
+Info (12128): Elaborating entity "mux_vga" for hierarchy "mux_vga:mux" File: C:/Users/User/Documents/Year 2/ece241/pac-man/background.v Line: 74
+Info (12128): Elaborating entity "animate_pacman" for hierarchy "animate_pacman:pacman" File: C:/Users/User/Documents/Year 2/ece241/pac-man/background.v Line: 75
+Warning (10240): Verilog HDL Always Construct warning at animate_pacman.v(114): inferring latch(es) for variable "go_increment_y_init", which holds its previous value in one or more paths through the always construct File: C:/Users/User/Documents/Year 2/ece241/pac-man/animate_pacman.v Line: 114
+Info (10041): Inferred latch for "go_increment_y_init" at animate_pacman.v(114) File: C:/Users/User/Documents/Year 2/ece241/pac-man/animate_pacman.v Line: 114
+Info (12128): Elaborating entity "draw_pacman_right" for hierarchy "animate_pacman:pacman|draw_pacman_right:pacman_right" File: C:/Users/User/Documents/Year 2/ece241/pac-man/animate_pacman.v Line: 219
+Warning (10230): Verilog HDL assignment warning at draw_pacman_right.v(54): truncated value with size 32 to match size of target (7) File: C:/Users/User/Documents/Year 2/ece241/pac-man/draw_pacman_right.v Line: 54
+Info (12128): Elaborating entity "pacman_right_small" for hierarchy "animate_pacman:pacman|draw_pacman_right:pacman_right|pacman_right_small:pacman" File: C:/Users/User/Documents/Year 2/ece241/pac-man/draw_pacman_right.v Line: 20
+Info (12128): Elaborating entity "altsyncram" for hierarchy "animate_pacman:pacman|draw_pacman_right:pacman_right|pacman_right_small:pacman|altsyncram:altsyncram_component" File: C:/Users/User/Documents/Year 2/ece241/pac-man/pacman_right_small.v Line: 81
+Info (12130): Elaborated megafunction instantiation "animate_pacman:pacman|draw_pacman_right:pacman_right|pacman_right_small:pacman|altsyncram:altsyncram_component" File: C:/Users/User/Documents/Year 2/ece241/pac-man/pacman_right_small.v Line: 81
+Info (12133): Instantiated megafunction "animate_pacman:pacman|draw_pacman_right:pacman_right|pacman_right_small:pacman|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/User/Documents/Year 2/ece241/pac-man/pacman_right_small.v Line: 81
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -1325,14 +1333,14 @@ Info (12133): Instantiated megafunction "animate_pacman:pacman|draw_pacman_right
     Info (12134): Parameter "width_a" = "1"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_aah1.tdf
-    Info (12023): Found entity 1: altsyncram_aah1 File: D:/background/db/altsyncram_aah1.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_aah1" for hierarchy "animate_pacman:pacman|draw_pacman_right:pacman_right|pacman_right_small:pacman|altsyncram:altsyncram_component|altsyncram_aah1:auto_generated" File: c:/desl/quartus18/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "draw_bg" for hierarchy "draw_bg:comb_9" File: D:/background/background.v Line: 76
-Warning (10230): Verilog HDL assignment warning at draw_bg.v(50): truncated value with size 32 to match size of target (15) File: D:/background/draw_bg.v Line: 50
-Info (12128): Elaborating entity "bg_mono" for hierarchy "draw_bg:comb_9|bg_mono:bg" File: D:/background/draw_bg.v Line: 16
-Info (12128): Elaborating entity "altsyncram" for hierarchy "draw_bg:comb_9|bg_mono:bg|altsyncram:altsyncram_component" File: D:/background/bg_mono.v Line: 81
-Info (12130): Elaborated megafunction instantiation "draw_bg:comb_9|bg_mono:bg|altsyncram:altsyncram_component" File: D:/background/bg_mono.v Line: 81
-Info (12133): Instantiated megafunction "draw_bg:comb_9|bg_mono:bg|altsyncram:altsyncram_component" with the following parameter: File: D:/background/bg_mono.v Line: 81
+    Info (12023): Found entity 1: altsyncram_aah1 File: C:/Users/User/Documents/Year 2/ece241/pac-man/db/altsyncram_aah1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_aah1" for hierarchy "animate_pacman:pacman|draw_pacman_right:pacman_right|pacman_right_small:pacman|altsyncram:altsyncram_component|altsyncram_aah1:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "draw_bg" for hierarchy "draw_bg:comb_9" File: C:/Users/User/Documents/Year 2/ece241/pac-man/background.v Line: 76
+Warning (10230): Verilog HDL assignment warning at draw_bg.v(57): truncated value with size 32 to match size of target (15) File: C:/Users/User/Documents/Year 2/ece241/pac-man/draw_bg.v Line: 57
+Info (12128): Elaborating entity "bg_mono" for hierarchy "draw_bg:comb_9|bg_mono:bg" File: C:/Users/User/Documents/Year 2/ece241/pac-man/draw_bg.v Line: 23
+Info (12128): Elaborating entity "altsyncram" for hierarchy "draw_bg:comb_9|bg_mono:bg|altsyncram:altsyncram_component" File: C:/Users/User/Documents/Year 2/ece241/pac-man/bg_mono.v Line: 81
+Info (12130): Elaborated megafunction instantiation "draw_bg:comb_9|bg_mono:bg|altsyncram:altsyncram_component" File: C:/Users/User/Documents/Year 2/ece241/pac-man/bg_mono.v Line: 81
+Info (12133): Instantiated megafunction "draw_bg:comb_9|bg_mono:bg|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/User/Documents/Year 2/ece241/pac-man/bg_mono.v Line: 81
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -1348,25 +1356,25 @@ Info (12133): Instantiated megafunction "draw_bg:comb_9|bg_mono:bg|altsyncram:al
     Info (12134): Parameter "width_a" = "1"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ccg1.tdf
-    Info (12023): Found entity 1: altsyncram_ccg1 File: D:/background/db/altsyncram_ccg1.tdf Line: 31
-Info (12128): Elaborating entity "altsyncram_ccg1" for hierarchy "draw_bg:comb_9|bg_mono:bg|altsyncram:altsyncram_component|altsyncram_ccg1:auto_generated" File: c:/desl/quartus18/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+    Info (12023): Found entity 1: altsyncram_ccg1 File: C:/Users/User/Documents/Year 2/ece241/pac-man/db/altsyncram_ccg1.tdf Line: 31
+Info (12128): Elaborating entity "altsyncram_ccg1" for hierarchy "draw_bg:comb_9|bg_mono:bg|altsyncram:altsyncram_component|altsyncram_ccg1:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_01a.tdf
-    Info (12023): Found entity 1: decode_01a File: D:/background/db/decode_01a.tdf Line: 22
-Info (12128): Elaborating entity "decode_01a" for hierarchy "draw_bg:comb_9|bg_mono:bg|altsyncram:altsyncram_component|altsyncram_ccg1:auto_generated|decode_01a:rden_decode" File: D:/background/db/altsyncram_ccg1.tdf Line: 39
+    Info (12023): Found entity 1: decode_01a File: C:/Users/User/Documents/Year 2/ece241/pac-man/db/decode_01a.tdf Line: 22
+Info (12128): Elaborating entity "decode_01a" for hierarchy "draw_bg:comb_9|bg_mono:bg|altsyncram:altsyncram_component|altsyncram_ccg1:auto_generated|decode_01a:rden_decode" File: C:/Users/User/Documents/Year 2/ece241/pac-man/db/altsyncram_ccg1.tdf Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_gfb.tdf
-    Info (12023): Found entity 1: mux_gfb File: D:/background/db/mux_gfb.tdf Line: 22
-Info (12128): Elaborating entity "mux_gfb" for hierarchy "draw_bg:comb_9|bg_mono:bg|altsyncram:altsyncram_component|altsyncram_ccg1:auto_generated|mux_gfb:mux2" File: D:/background/db/altsyncram_ccg1.tdf Line: 40
+    Info (12023): Found entity 1: mux_gfb File: C:/Users/User/Documents/Year 2/ece241/pac-man/db/mux_gfb.tdf Line: 22
+Info (12128): Elaborating entity "mux_gfb" for hierarchy "draw_bg:comb_9|bg_mono:bg|altsyncram:altsyncram_component|altsyncram_ccg1:auto_generated|mux_gfb:mux2" File: C:/Users/User/Documents/Year 2/ece241/pac-man/db/altsyncram_ccg1.tdf Line: 40
 Warning (12125): Using design file vga_adapter.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: vga_adapter File: D:/background/vga_adapter.v Line: 78
-Info (12128): Elaborating entity "vga_adapter" for hierarchy "vga_adapter:VGA" File: D:/background/background.v Line: 220
+    Info (12023): Found entity 1: vga_adapter File: C:/Users/User/Documents/Year 2/ece241/pac-man/vga_adapter.v Line: 78
+Info (12128): Elaborating entity "vga_adapter" for hierarchy "vga_adapter:VGA" File: C:/Users/User/Documents/Year 2/ece241/pac-man/background.v Line: 220
 Warning (12125): Using design file vga_address_translator.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: vga_address_translator File: D:/background/vga_address_translator.v Line: 4
-Info (12128): Elaborating entity "vga_address_translator" for hierarchy "vga_adapter:VGA|vga_address_translator:user_input_translator" File: D:/background/vga_adapter.v Line: 192
-Info (12128): Elaborating entity "altsyncram" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory" File: D:/background/vga_adapter.v Line: 213
-Info (12130): Elaborated megafunction instantiation "vga_adapter:VGA|altsyncram:VideoMemory" File: D:/background/vga_adapter.v Line: 213
-Info (12133): Instantiated megafunction "vga_adapter:VGA|altsyncram:VideoMemory" with the following parameter: File: D:/background/vga_adapter.v Line: 213
-    Info (12134): Parameter "WIDTH_A" = "1"
-    Info (12134): Parameter "WIDTH_B" = "1"
+    Info (12023): Found entity 1: vga_address_translator File: C:/Users/User/Documents/Year 2/ece241/pac-man/vga_address_translator.v Line: 4
+Info (12128): Elaborating entity "vga_address_translator" for hierarchy "vga_adapter:VGA|vga_address_translator:user_input_translator" File: C:/Users/User/Documents/Year 2/ece241/pac-man/vga_adapter.v Line: 192
+Info (12128): Elaborating entity "altsyncram" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory" File: C:/Users/User/Documents/Year 2/ece241/pac-man/vga_adapter.v Line: 213
+Info (12130): Elaborated megafunction instantiation "vga_adapter:VGA|altsyncram:VideoMemory" File: C:/Users/User/Documents/Year 2/ece241/pac-man/vga_adapter.v Line: 213
+Info (12133): Instantiated megafunction "vga_adapter:VGA|altsyncram:VideoMemory" with the following parameter: File: C:/Users/User/Documents/Year 2/ece241/pac-man/vga_adapter.v Line: 213
+    Info (12134): Parameter "WIDTH_A" = "9"
+    Info (12134): Parameter "WIDTH_B" = "9"
     Info (12134): Parameter "INTENDED_DEVICE_FAMILY" = "Cyclone II"
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
     Info (12134): Parameter "WIDTHAD_A" = "15"
@@ -1380,18 +1388,21 @@ Info (12133): Instantiated megafunction "vga_adapter:VGA|altsyncram:VideoMemory"
     Info (12134): Parameter "CLOCK_ENABLE_OUTPUT_B" = "BYPASS"
     Info (12134): Parameter "POWER_UP_UNINITIALIZED" = "FALSE"
     Info (12134): Parameter "INIT_FILE" = "black.mif"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_i6m1.tdf
-    Info (12023): Found entity 1: altsyncram_i6m1 File: D:/background/db/altsyncram_i6m1.tdf Line: 33
-Info (12128): Elaborating entity "altsyncram_i6m1" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_i6m1:auto_generated" File: c:/desl/quartus18/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_27m1.tdf
+    Info (12023): Found entity 1: altsyncram_27m1 File: C:/Users/User/Documents/Year 2/ece241/pac-man/db/altsyncram_27m1.tdf Line: 33
+Info (12128): Elaborating entity "altsyncram_27m1" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_27m1:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_7la.tdf
-    Info (12023): Found entity 1: decode_7la File: D:/background/db/decode_7la.tdf Line: 22
-Info (12128): Elaborating entity "decode_7la" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_i6m1:auto_generated|decode_7la:decode2" File: D:/background/db/altsyncram_i6m1.tdf Line: 46
+    Info (12023): Found entity 1: decode_7la File: C:/Users/User/Documents/Year 2/ece241/pac-man/db/decode_7la.tdf Line: 22
+Info (12128): Elaborating entity "decode_7la" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_27m1:auto_generated|decode_7la:decode2" File: C:/Users/User/Documents/Year 2/ece241/pac-man/db/altsyncram_27m1.tdf Line: 46
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_ofb.tdf
+    Info (12023): Found entity 1: mux_ofb File: C:/Users/User/Documents/Year 2/ece241/pac-man/db/mux_ofb.tdf Line: 22
+Info (12128): Elaborating entity "mux_ofb" for hierarchy "vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_27m1:auto_generated|mux_ofb:mux3" File: C:/Users/User/Documents/Year 2/ece241/pac-man/db/altsyncram_27m1.tdf Line: 49
 Warning (12125): Using design file vga_pll.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: vga_pll File: D:/background/vga_pll.v Line: 36
-Info (12128): Elaborating entity "vga_pll" for hierarchy "vga_adapter:VGA|vga_pll:mypll" File: D:/background/vga_adapter.v Line: 231
-Info (12128): Elaborating entity "altpll" for hierarchy "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" File: D:/background/vga_pll.v Line: 53
-Info (12130): Elaborated megafunction instantiation "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" File: D:/background/vga_pll.v Line: 53
-Info (12133): Instantiated megafunction "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" with the following parameter: File: D:/background/vga_pll.v Line: 53
+    Info (12023): Found entity 1: vga_pll File: C:/Users/User/Documents/Year 2/ece241/pac-man/vga_pll.v Line: 36
+Info (12128): Elaborating entity "vga_pll" for hierarchy "vga_adapter:VGA|vga_pll:mypll" File: C:/Users/User/Documents/Year 2/ece241/pac-man/vga_adapter.v Line: 231
+Info (12128): Elaborating entity "altpll" for hierarchy "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" File: C:/Users/User/Documents/Year 2/ece241/pac-man/vga_pll.v Line: 53
+Info (12130): Elaborated megafunction instantiation "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" File: C:/Users/User/Documents/Year 2/ece241/pac-man/vga_pll.v Line: 53
+Info (12133): Instantiated megafunction "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component" with the following parameter: File: C:/Users/User/Documents/Year 2/ece241/pac-man/vga_pll.v Line: 53
     Info (12134): Parameter "operation_mode" = "NORMAL"
     Info (12134): Parameter "intended_device_family" = "Cyclone II"
     Info (12134): Parameter "lpm_type" = "altpll"
@@ -1404,52 +1415,52 @@ Info (12133): Instantiated megafunction "vga_adapter:VGA|vga_pll:mypll|altpll:al
     Info (12134): Parameter "clk0_multiply_by" = "1"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altpll_80u.tdf
-    Info (12023): Found entity 1: altpll_80u File: D:/background/db/altpll_80u.tdf Line: 25
-Info (12128): Elaborating entity "altpll_80u" for hierarchy "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated" File: c:/desl/quartus18/quartus/libraries/megafunctions/altpll.tdf Line: 897
+    Info (12023): Found entity 1: altpll_80u File: C:/Users/User/Documents/Year 2/ece241/pac-man/db/altpll_80u.tdf Line: 25
+Info (12128): Elaborating entity "altpll_80u" for hierarchy "vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altpll.tdf Line: 897
 Warning (12125): Using design file vga_controller.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: vga_controller File: D:/background/vga_controller.v Line: 9
-Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_adapter:VGA|vga_controller:controller" File: D:/background/vga_adapter.v Line: 262
-Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+    Info (12023): Found entity 1: vga_controller File: C:/Users/User/Documents/Year 2/ece241/pac-man/vga_controller.v Line: 9
+Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_adapter:VGA|vga_controller:controller" File: C:/Users/User/Documents/Year 2/ece241/pac-man/vga_adapter.v Line: 262
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: D:/background/background.v Line: 27
-    Warning (13410): Pin "VGA_R[8]" is stuck at GND File: D:/background/background.v Line: 28
-    Warning (13410): Pin "VGA_R[9]" is stuck at GND File: D:/background/background.v Line: 28
-    Warning (13410): Pin "VGA_G[8]" is stuck at GND File: D:/background/background.v Line: 28
-    Warning (13410): Pin "VGA_G[9]" is stuck at GND File: D:/background/background.v Line: 28
-    Warning (13410): Pin "VGA_B[8]" is stuck at GND File: D:/background/background.v Line: 28
-    Warning (13410): Pin "VGA_B[9]" is stuck at GND File: D:/background/background.v Line: 28
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at VCC File: C:/Users/User/Documents/Year 2/ece241/pac-man/background.v Line: 27
+    Warning (13410): Pin "VGA_R[8]" is stuck at GND File: C:/Users/User/Documents/Year 2/ece241/pac-man/background.v Line: 28
+    Warning (13410): Pin "VGA_R[9]" is stuck at GND File: C:/Users/User/Documents/Year 2/ece241/pac-man/background.v Line: 28
+    Warning (13410): Pin "VGA_G[8]" is stuck at GND File: C:/Users/User/Documents/Year 2/ece241/pac-man/background.v Line: 28
+    Warning (13410): Pin "VGA_G[9]" is stuck at GND File: C:/Users/User/Documents/Year 2/ece241/pac-man/background.v Line: 28
+    Warning (13410): Pin "VGA_B[8]" is stuck at GND File: C:/Users/User/Documents/Year 2/ece241/pac-man/background.v Line: 28
+    Warning (13410): Pin "VGA_B[9]" is stuck at GND File: C:/Users/User/Documents/Year 2/ece241/pac-man/background.v Line: 28
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 5 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file D:/background/output_files/background.map.smsg
+Info (17049): 9 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/User/Documents/Year 2/ece241/pac-man/output_files/background.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning: RST port on the PLL is not properly connected on instance vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated|generic_pll1. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: D:/background/db/altpll_80u.tdf Line: 33
+Warning: RST port on the PLL is not properly connected on instance vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated|generic_pll1. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: C:/Users/User/Documents/Year 2/ece241/pac-man/db/altpll_80u.tdf Line: 33
     Info: Must be connected
 Warning (21074): Design contains 8 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[2]" File: D:/background/background.v Line: 24
-    Warning (15610): No output dependent on input pin "SW[3]" File: D:/background/background.v Line: 24
-    Warning (15610): No output dependent on input pin "SW[4]" File: D:/background/background.v Line: 24
-    Warning (15610): No output dependent on input pin "SW[5]" File: D:/background/background.v Line: 24
-    Warning (15610): No output dependent on input pin "SW[6]" File: D:/background/background.v Line: 24
-    Warning (15610): No output dependent on input pin "SW[7]" File: D:/background/background.v Line: 24
-    Warning (15610): No output dependent on input pin "SW[8]" File: D:/background/background.v Line: 24
-    Warning (15610): No output dependent on input pin "SW[9]" File: D:/background/background.v Line: 24
-Info (21057): Implemented 334 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/User/Documents/Year 2/ece241/pac-man/background.v Line: 24
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/User/Documents/Year 2/ece241/pac-man/background.v Line: 24
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/User/Documents/Year 2/ece241/pac-man/background.v Line: 24
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/User/Documents/Year 2/ece241/pac-man/background.v Line: 24
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/User/Documents/Year 2/ece241/pac-man/background.v Line: 24
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/User/Documents/Year 2/ece241/pac-man/background.v Line: 24
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/User/Documents/Year 2/ece241/pac-man/background.v Line: 24
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/User/Documents/Year 2/ece241/pac-man/background.v Line: 24
+Info (21057): Implemented 363 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 35 output pins
-    Info (21061): Implemented 276 logic cells
-    Info (21064): Implemented 7 RAM segments
+    Info (21061): Implemented 281 logic cells
+    Info (21064): Implemented 31 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
-    Info: Peak virtual memory: 739 megabytes
-    Info: Processing ended: Thu Nov 15 15:58:39 2018
-    Info: Elapsed time: 00:00:26
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Peak virtual memory: 4865 megabytes
+    Info: Processing ended: Wed Nov 21 00:40:06 2018
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:35
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in D:/background/output_files/background.map.smsg.
+The suppressed messages can be found in C:/Users/User/Documents/Year 2/ece241/pac-man/output_files/background.map.smsg.
 
 
