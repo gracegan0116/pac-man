@@ -1,4 +1,4 @@
-module draw_pacman_right (reset, writeEn, x, y, startx, starty, clock, colour, done_print);
+module draw_pacman_right (reset, writeEn, x, y, startx, starty, clock, colour, done_print, light, win);
     input clock;
     input writeEn;
     input reset;
@@ -8,12 +8,14 @@ module draw_pacman_right (reset, writeEn, x, y, startx, starty, clock, colour, d
     output [6:0] y;
     output reg done_print;
     output colour;
+	 output light;
+	 output win;
 
     wire[6:0] address;
     reg[7:0] count_x = 0;
     reg[6:0] count_y = 0;
 
-    pacman_right_small pacman(
+    pacman pacman(
         .address(address),
         .clock(clock),
         .q(colour)
@@ -54,5 +56,7 @@ module draw_pacman_right (reset, writeEn, x, y, startx, starty, clock, colour, d
     assign address = addr_x + 5 * (addr_y);
     assign x = count_x + startx;
     assign y = count_y + starty;
+	 
+	 check_maze cm(.clk(clock),.xIn(x),.yIn(y),.isWhite(light), .win(win));
 endmodule
 

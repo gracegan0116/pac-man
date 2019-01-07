@@ -1,4 +1,4 @@
-module animate_pacman (go, resetn, vga_x, vga_y, in_x, out_x, in_y, out_y, colour, done, clock, left, right, up, down);	
+module animate_pacman (go, resetn, vga_x, vga_y, in_x, out_x, in_y, out_y, colour, done, clock, left, right, up, down, light, win);	
 	input go;
 	input resetn;
 	input clock;
@@ -7,6 +7,8 @@ module animate_pacman (go, resetn, vga_x, vga_y, in_x, out_x, in_y, out_y, colou
 	input up;
 	input down;
 	reg writeEn;
+	output light;
+	output win;
 	
 	reg go_increment; // for x
 	reg go_decrement; // for x
@@ -92,9 +94,9 @@ module animate_pacman (go, resetn, vga_x, vga_y, in_x, out_x, in_y, out_y, colou
 			w_in_x = in_x;
 		end 
 		else if (go_increment)
-			w_in_x = w_in_x + 3'b111;
+			w_in_x = w_in_x + 3'b011;
 		else if (go_decrement)
-			w_in_x = w_in_x - 3'b111;
+			w_in_x = w_in_x - 3'b011;
 	end
 	
 	// for y
@@ -105,9 +107,9 @@ module animate_pacman (go, resetn, vga_x, vga_y, in_x, out_x, in_y, out_y, colou
 			w_in_y <= in_y;
 		end 
 		else if (go_increment_y)
-			w_in_y <= w_in_y + 3'b111;
+			w_in_y <= w_in_y + 3'b011;
 		else if (go_decrement_y)
-			w_in_y <= w_in_y - 3'b111;
+			w_in_y <= w_in_y - 3'b011;
 	end
 	
 	always @(*)
@@ -215,7 +217,9 @@ module animate_pacman (go, resetn, vga_x, vga_y, in_x, out_x, in_y, out_y, colou
 					.starty(w_out_y),
 					.clock(clock),
 					.colour(colour),
-					.done_print(done_print) 
+					.done_print(done_print),
+					.light(light),
+					.win(win)
 					);
 					
 

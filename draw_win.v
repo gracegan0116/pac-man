@@ -1,4 +1,4 @@
-module draw_bg (enable, clk, resetn, vga_x, vga_y, colour, done);
+module draw_win (enable, clk, resetn, vga_x, vga_y, colour, done);
     input clk, enable, resetn;
     output [7:0] vga_x;
     output [6:0] vga_y;
@@ -9,7 +9,7 @@ module draw_bg (enable, clk, resetn, vga_x, vga_y, colour, done);
     reg [7:0] count_x = 0;
     reg [6:0] count_y = 0;
 
-    bg_mono bg (
+    win win (
         .address(address),
         .clock(clk),
         .q(colour)
